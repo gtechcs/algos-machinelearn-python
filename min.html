@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nim</title>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+</head>
+<body>
+<div data-role=page>
+  <div data-role=header>
+    <h1>Nim, the game</h1>
+  </div>
+
+  <div data-role=content>
+    <p> Nim </p>
+	<p>To play: 1. Select a heap. 2. Put how many stones to pick below your name, and pres Enter.</p>
+	<input type=button id="newgame" value="Start new game" />
+        <div class=ui-grid-b>
+                <div class=ui-block-a>     
+                <input type=button id="selectheap1" value="Heap1"/>
+		</div>
+                <div class=ui-block-b>        
+		<input type=button id="selectheap2" value="Heap2"/>
+                </div>
+                <div class=ui-block-c>         
+		<input type=button id="selectheap3" value="Heap3"/>
+                </div>
+                <div class=ui-block-a id="heap1">10</div>
+                <div class=ui-block-b id="heap2">10</div>
+                <div class=ui-block-c id="heap3">10</div>
+	</div>
+    	<div class=ui-grid-a>
+      		<div class=ui-block-a> <h3>Player1</h3> 
+		</div>
+      		<div class=ui-block-b><h3>Player2</h3>
+		</div>
+		<div class=ui-block-a data-role="fieldcontains">
+			  <input type="text" name="name" id="player1" value="" />
+		</div>
+                <div class=ui-block-b data-role="fieldcontains">
+                          <input type="text" name="name" id="player2" value="" />
+                </div>
+  	</div>
+
+        <div data-role="fieldcontain">
+                <label for="textarea">Running : </label>
+                <textarea cols="40" rows="12" name="textarea" id="instruction" disabled="disabled"></textarea>
+        </div>
+  </div>
+  <div data-role=footer style="position: fixed; bottom: 0px; left: 0px; right: 0px;">
+    <h1>Enjoy</h1>
+  </div>
+</div>
+</body>
+</html>
+<script>
+
+var gameOver = false;
+
+//var $heap1 = document.getElementById('heap1');
+//$('#heap1').text("10");
+//alert($('#player1').val());
+//$('#player1').val("12");
+//var $content = $("[data-role=content]");
+//var obj = $.mobile;
+
+var whichheap;
+var nextPlayer = 1;
+$('#instruction').text("Player1 turn!");
+var MAX_STONES = 10;
+
+validateStones = function(stones){
+	if(stones < 0 || stones >MAX_STONES)
+		return false;
+}
+
+
+$('#selectheap1').click(function() {
+	console.log("Heap1");
+	$('#selectheap1').addClass('ui-state-focus');
+	$('#instruction').text("Heap1 selected");
+	whichheap = 1;
+});
+$('#selectheap2').click(function() {
+//        console.log("Heap2");
+        $('#selectheap1').addClass('ui-state-focus');
+        $('#instruction').text("Heap2 selected");
+	whichheap = 2;
+});
+$('#selectheap3').click(function() {
+//        console.log("Heap3");
+        $('#selectheap1').addClass('ui-state-focus');
+        $('#instruction').text("Heap3 selected");
+	whichheap = 3;
+});
+
+$('#player1').bind("change", function(){
+	console.log('Player1 selects');
+	if(nextPlayer == 2){
+		$('#instruction').text("TThis is Player2's turn.");
+	        $('#player2').val("");
+        	$('#player1').val("");
+		return;
+	}
+	var s = parseInt($('#player1').val());
+	console.log('Player1 enters ' + s);
+	var h1 = parseInt($('#heap1').text());
+        var h2 = parseInt($('#heap2').text());
+        var h3 = parseInt($('#heap3').text());
+	var d;
+	if(validateStones(s) == false){
+		$('#instruction').text("Put a number between 0 and "+ MAX_STONES + "\n");
+	        $('#player2').val("");
+        	$('#player1').val("");
+		return;	
+	}
+	if(whichheap == 1){
+		d = h1 - s;	
+	}else if( whichheap == 2){
+		d = h2 - s;
+	}else{
+		d = h3 - s;
+	}
+	console.log("d "+ d);
+
+	if( d < 0){
+		console.log("This will not works s:"+ s + "   h1:"+ h1 + "  h2"+h2+ "  h3"+ h3);
+		$('#instruction').text("Put a smaller number than "+ s+ "\n");
+		return;
+	}else{
+                console.log("Player1 entered s:"+ s);
+	}
+	if(whichheap == 1)
+		$('#heap1').text(d);
+	if(whichheap == 2)
+                $('#heap2').text(d);
+        if(whichheap == 3)
+                $('#heap3').text(d);
+	
+	$('#player1').val("");
+	$('#player2').val("");
+	
+	nextPlayer = 2;
+
+	whoWon();
+
+});
+
+
+$('#player2').bind("change", function(){
+        console.log('Player2 selects');
+        if(nextPlayer == 1){
+                $('#instruction').text("This is Player1's turn.");
+	        $('#player2').val("");
+        	$('#player1').val("");
+                return;
+        }
+
+        var s = parseInt($('#player2').val());
+        console.log('Player2 entered ' + s);
+        var h1 = parseInt($('#heap1').text());
+        var h2 = parseInt($('#heap2').text());
+        var h3 = parseInt($('#heap3').text());
+        var d;
+        if(validateStones(s) == false){
+                $('#instruction').text("Put a number between 0 and "+ MAX_STONES + "\n");
+	        $('#player2').val("");
+        	$('#player1').val("");
+                return;
+        }
+        if(whichheap == 1){
+                d = h1 - s;
+        }else if( whichheap == 2){
+                d = h2 - s;
+        }else{
+                d = h3 - s;
+        }
+        console.log("d "+ d);
+
+        if( d < 0){
+                console.log("No no no s"+ s + "   h1:"+ h1 + "  h2"+h2+ "  h3"+ h3);
+                $('#instruction').text("Put a smaller number ");
+                return;
+        }else{
+                console.log("Yes yes yes s:"+ s);
+        }
+        if(whichheap == 1){
+	        $('#heap1').text(d);
+	}
+        if(whichheap == 2)
+                $('#heap2').text(d);
+        if(whichheap == 3)
+                $('#heap3').text(d);
+
+	$('#player2').val("");
+	$('#player1').val("");
+	
+	nextPlayer = 1;
+
+        whoWon();
+});
+
+$('#newgame').click(function(){
+	$('#heap1').text(10);
+	$('#heap2').text(10);
+	$('#heap3').text(10);
+	$('#instruction').text("New game. Player1 turn.");
+
+});
+var whoWon = function(){
+        if(($('#heap1').text() + $('#heap2').text() + $('#heap3').text()) <= 1){
+                console.log('We have a winner');
+		if(nextPlayer == 1)
+			$('#instruction').text("We have a winner Player 1" );
+		else{
+                        $('#instruction').text("We have a winner Player 2" );
+		}
+                return true;
+        }
+	$('#instruction').text("No Winner");
+        console.log('No winner\n');
+        return false;
+}
+
+</script>
+
