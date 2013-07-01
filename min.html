@@ -206,12 +206,12 @@ $('#newgame').click(function(){
 	$('#heap2').text(10);
 	$('#heap3').text(10);
 	$('#instruction').text("New game. Player1 turn.");
-
+	nextPlayer = 1;
 });
 var whoWon = function(){
         if(($('#heap1').text() + $('#heap2').text() + $('#heap3').text()) <= 1){
                 console.log('We have a winner');
-		if(nextPlayer == 1)
+		if(nextPlayer == 2)
 			$('#instruction').text("We have a winner Player 1" );
 		else{
                         $('#instruction').text("We have a winner Player 2" );
