@@ -1,0 +1,403 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xml:lang="en-us" dir="ltr" xmlns="http://www.w3.org/1999/xhtml" lang="en-us"><head>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="AssignmentLab4.php_files/styles.css">
+<link rel="stylesheet" type="text/css" href="AssignmentLab4.php_files/styles_002.css">
+
+<!--[if IE 7]>
+    <link rel="stylesheet" type="text/css" href="http://smccd.mrooms.net/theme/standard/styles_ie7.css" />
+<![endif]-->
+<!--[if IE 6]>
+    <link rel="stylesheet" type="text/css" href="http://smccd.mrooms.net/theme/standard/styles_ie6.css" />
+<![endif]-->
+
+
+<meta name="keywords" content="moodle,  ">
+<title></title>
+<link rel="shortcut icon" href="http://smccd.mrooms.net/theme/smccd_csm/favicon.ico">
+<script type="text/javascript" src="AssignmentLab4.php_files/spellChecker.js"></script>
+<!--<style type="text/css">/*<![CDATA[*/ body{behavior:url(http://smccd.mrooms.net/lib/csshover.htc);} /*]]>*/</style>-->
+
+<script type="text/javascript" src="AssignmentLab4.php_files/javascript-static.js"></script>
+<script type="text/javascript" src="AssignmentLab4.php_files/javascript-mod.php"></script>
+<script type="text/javascript" src="AssignmentLab4.php_files/overlib.js"></script>
+<script type="text/javascript" src="AssignmentLab4.php_files/overlib_cssstyle.js"></script>
+<script type="text/javascript" src="AssignmentLab4.php_files/cookies.js"></script>
+<script type="text/javascript" src="AssignmentLab4.php_files/ufo.js"></script>
+<script type="text/javascript" src="AssignmentLab4.php_files/dropdown.js"></script>  
+
+<script type="text/javascript" defer="defer">
+//<![CDATA[
+setTimeout('fix_column_widths()', 20);
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+function openpopup(url, name, options, fullscreen) {
+    var fullurl = "http://smccd.mrooms.net" + url;
+    var windowobj = window.open(fullurl, name, options);
+    if (!windowobj) {
+        return true;
+    }
+    if (fullscreen) {
+        windowobj.moveTo(0, 0);
+        windowobj.resizeTo(screen.availWidth, screen.availHeight);
+    }
+    windowobj.focus();
+    return false;
+}
+
+function uncheckall() {
+    var inputs = document.getElementsByTagName('input');
+    for(var i = 0; i < inputs.length; i++) {
+        inputs[i].checked = false;
+    }
+}
+
+function checkall() {
+    var inputs = document.getElementsByTagName('input');
+    for(var i = 0; i < inputs.length; i++) {
+        inputs[i].checked = true;
+    }
+}
+
+function inserttext(text) {
+  text = ' ' + text + ' ';
+  if ( opener.document.forms['theform'].message.createTextRange && opener.document.forms['theform'].message.caretPos) {
+    var caretPos = opener.document.forms['theform'].message.caretPos;
+    caretPos.text = caretPos.text.charAt(caretPos.text.length - 1) == ' ' ? text + ' ' : text;
+  } else {
+    opener.document.forms['theform'].message.value  += text;
+  }
+  opener.document.forms['theform'].message.focus();
+}
+
+function getElementsByClassName(oElm, strTagName, oClassNames){
+	var arrElements = (strTagName == "*" && oElm.all)? oElm.all : oElm.getElementsByTagName(strTagName);
+	var arrReturnElements = new Array();
+	var arrRegExpClassNames = new Array();
+	if(typeof oClassNames == "object"){
+		for(var i=0; i<oClassNames.length; i++){
+			arrRegExpClassNames.push(new RegExp("(^|\\s)" + oClassNames[i].replace(/\-/g, "\\-") + "(\\s|$)"));
+		}
+	}
+	else{
+		arrRegExpClassNames.push(new RegExp("(^|\\s)" + oClassNames.replace(/\-/g, "\\-") + "(\\s|$)"));
+	}
+	var oElement;
+	var bMatchesAll;
+	for(var j=0; j<arrElements.length; j++){
+		oElement = arrElements[j];
+		bMatchesAll = true;
+		for(var k=0; k<arrRegExpClassNames.length; k++){
+			if(!arrRegExpClassNames[k].test(oElement.className)){
+				bMatchesAll = false;
+				break;
+			}
+		}
+		if(bMatchesAll){
+			arrReturnElements.push(oElement);
+		}
+	}
+	return (arrReturnElements)
+}
+//]]>
+</script>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type"><title></title></head><body class="mod-resource course-32055 dir-ltr lang-en_us_utf8" id="mod-resource-view">
+<div id="wrapper">
+<div id="page">
+</div>
+<!-- END OF HEADER -->
+<div id="content">
+<div class="box generalbox generalboxcontent boxaligncenter clearfix">
+
+
+
+<style type="text/css"> /* <![CDATA[ */ /* RESET */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { margin:0; padding:0; } table { border-collapse:collapse; border-spacing:0; } fieldset,img { border:0; } address,caption,cite,code,dfn,em,strong,th,var { font-style:normal; font-weight:normal; } ol,ul { list-style:none; } caption,th { text-align:left; } h1,h2,h3,h4,h5,h6 { font-size:100%; font-weight:normal; } q:before,q:after { content:''; } abbr,acronym { border:0; }
+html {background-color: #fff;color:#1A222A;width:760px;margin:0 auto}
+body,p,td,div,li,blockquote {margin-top:2em;font-family: Verdana,Bitsream Vera Sans, Lucida Grande,Gill Sans, Gill Sans MT, Helvetica, Arial, Verdana, sans-serif;font-size:11px;}
+table {border-collapse:collapse;border:solid 1px #e6e6e6;margin:0 auto;}
+td {padding: 10px; border:solid 1px #A525A;margin:0px; }
+th {padding:0}
+h1,h2,h3,h4 {font-family:Gill Sans, Gill Sans MT, sans-serif;clear:both;}
+h1 {font-size:240%;}
+h2 {font-size:200%;}
+h3 {font-size:160%;}
+h4 {font-size:220%;}
+hr {border: none 0;
+border-top: 1px dotted #aaa;/*the border*/
+width: 100%;
+height: 1px;/*whatever the total width of the border-top and border-bottom equal*/
+}
+.qp { color: #e88;}
+.lp {color:#88e;}
+
+/* ]]> */</style>
+
+<h1>Lab 4</h1>
+<h4>Modules and Libraries -- Enumerable and CGI</h4>
+
+<blockquote style="text-align: center; font-weight: bold; color: rgb(136, 68, 68);">This is a graded lab weighted as two Sanity Checks.<br>NO LATE SUBMISSIONS WILL BE GRADED.</blockquote>
+<p><span style="font-weight: bold;">ABSTRACT:</span><br>
+In this lab we will reuse the code we wrote in Lab 3 to build a page
+that allows the user to sort the students page by column. As you may
+recall, there are 10 fields in our table: number, username, password,
+uid, gid, gcos_field, home_dir, login_shell, firstname, and lastname. </p>
+<p>Using these column names, we will construct a web page that allows
+the user to click on the column header and see the page sorted by the
+chosen field.<br>
+<br>
+</p>
+<h1>1 Reading and Online Resources
+</h1>
+<ol>
+<li>Ruby ERB documentation: <a href="http://ruby-doc.org/stdlib/libdoc/erb/rdoc/classes/ERB.html">http://ruby-doc.org/stdlib/libdoc/erb/rdoc/classes/ERB.html</a>
+</li>
+<li>ERB Documents: <a href="http://smccd.mrooms.net/mod/resource/view.php?id=173174">ERB Summary</a>
+</li>
+<li>Ruby CGI documentation: <a href="http://www.ruby-doc.org/stdlib/libdoc/cgi/rdoc/index.html">http://www.ruby-doc.org/stdlib/libdoc/cgi/rdoc/index.html</a>
+</li>
+<li><i>Programming Ruby</i>: <i>Ruby and The Web</i>, <a href="http://www.ruby-doc.org/docs/ProgrammingRuby/html/web.html">http://www.ruby-doc.org/docs/ProgrammingRuby/html/web.html</a>
+</li>
+<li>Example output: <a href="http://csmcis2.smccd.edu/%7Ecoolj/lab4.cgi">http://csmcis2.smccd.edu/~coolj/lab4.cgi</a></li>
+<li><br>
+</li>
+</ol>
+<h1>2 <span style="font-family: Gill Sans;">TODO</span>
+</h1>
+<p>
+Lab 4 will reuse the code you wrote for Lab 3, but we will add sorting
+by field name. This feature allows the user to click the column name to
+sort the student records. To make this process work, we need to have a
+way to
+send a signal to the script, and for that we will use HTML links of the
+format</p>
+<div style="margin-left: 40px;"><span style="font-family: monospace;">
+<pre>&lt;a href="/~YOURNAME/lab4.cgi?sort_by=shell" &gt;Shell&lt;/a&gt;</pre>
+</span></div>
+<p><span style="font-family: monospace;">
+</span></p>
+<p>for
+each of the seven fields in the <span style="font-family: monospace;">/etc/passwd</span>
+line.<br>
+</p>
+<p>We will also use ERB templates to create the HTML. Using ERB allows
+us to remove the HTML from the Ruby code.<br>
+</p>
+<p>REQUIREMENTS:<br>
+</p>
+<ul>
+<li>1) Your script <tt><b>lab4.cgi</b></tt> will have the ability to
+sort
+by column name.</li>
+<li>2) When a user clicks on a column name, <tt><b>lab4.cgi</b></tt>
+will
+redisplay the data sorted by that column. <i>Toggling sorting from
+ascending to descending is optional. </i> </li>
+<li>3) Display the output using an ERB template named <tt><b>lab4_template.html</b></tt>.
+All
+of
+the
+HTML
+for
+the page should be in the ERB template.<br>
+</li>
+<li>4) Create a module named <tt><b>CGI_Helper</b></tt> in a
+file
+named <tt><b>cgi_helper.rb</b></tt>. This module should contain
+at least two methods. You can always add more functionality as the need
+arises: <br>
+<ol>
+<li><tt>5)<b> http_header()</b></tt> # prints the 'Content-type:
+text/html'
+and a blank line. </li>
+</ol>
+<ol>
+<li><tt>6)<b> humanize(string)</b></tt> # returns a ``humanized"
+string. That is, table field names like ``last_name" and ``first_name"
+are returned as ``first name" and ``last name." We can use
+these humanized field names as labels. </li>
+<li>7) Optional function: <tt><b>render_erb(data)</b></tt> #
+returns a string
+processed
+by ERB class. (See the appendix for an example) </li>
+<li>8) Optional: <tt><b>doctype(type)</b></tt> # returns a valid
+HTML
+DOCTYPE. See http://www.w3.org/QA/2002/04/valid-dtd-list.html for
+a complete list. </li>
+</ol>
+</li>
+<li>9) Test your scripts mercilessly. Log in to CSMCIS2 and run your
+script on the command line to make certain that there are no infinite
+loops. <b>This is a must.</b></li>
+</ul>
+<ol>
+<li> <br>
+</li>
+</ol>
+<p>
+</p>
+<h1>3 How To Proceed
+</h1>
+<p>
+Study the Ruby documentation for the CGI and ERB classes. Read the
+<i>Ruby and the Web</i> chapter in <i>Programming Ruby</i>. </p>
+<p>DETERMINING THE SORTING FIELD<br>
+To implement this page, the <tt>lab4.cgi</tt> script needs to know
+which column the user has selected. We can use HTML links to
+transmit the user's choice and we can use the CGI class to parse
+the user's choice from the query. We will use the QUERY_STRING
+information to send information from the browser to our script. <br>
+</p>
+<p>In a URL, the QUERY_STRING follows the "?" and is composed of
+key=value pairs. The Ruby CGI object will store the key value pairs in
+a Hash named "params". Assuming that we have a page that contains HTML
+links like this:<br>
+<br>
+</p>
+<pre>&lt;table&gt;<br> &lt;tr&gt;<br> &lt;th&gt;&lt;a href="<span style="color: rgb(51, 102, 255);">?<span style="font-weight: bold;">sort_by=number</span></span>"&gt;Number&lt;/a&gt;&lt;/th&gt;<br> &lt;th&gt;&lt;a href="?<span style="color: rgb(51, 102, 255); font-weight: bold;">sort_by=user_name</span>"&gt;User Name&lt;/a&gt;&lt;/th&gt;<br> &lt;th&gt;&lt;a href="?<span style="color: rgb(51, 102, 255); font-weight: bold;">sort_by=password</span>"&gt;Password&lt;/a&gt;&lt;/th&gt;<br> ... and so on ...<br> &lt;/tr&gt;<br>&lt;/table&gt; <br><br></pre>
+When the user clicks on the link, we can extract the user's selection
+using the CGI class, in this manner:<br>
+<div style="margin-left: 40px;">
+<pre>require 'cgi_helper' </pre>
+<pre>include CGIHelper </pre>
+<pre>require 'cgi' </pre>
+<pre>http_header # print the Content-type line and blank line</pre>
+<pre>@sort_by = CGI.new.params['sort_by'].to_s</pre>
+</div>
+<pre><br></pre>
+Once we have the user's selection stored in <tt><b>@sort_by</b></tt>,
+we can sort the Student instances using the <tt>Enumerable#sort_by</tt>
+method.<br>
+<br>
+<h4>Step By Step
+</h4>
+<ul>
+<li>Determine the column to sort by. </li>
+<li>Use the CGI class to extract the value of the sort_by parameter.</li>
+<li>Use <tt>Enumerable#sort_by</tt> to sort Student instances by
+attribute.
+Use the <tt>send()</tt> method to accomplish this. </li>
+<li>Display the script output in an ERB template named <tt>lab4_template.html.</tt>
+</li>
+</ul>
+<p>
+</p>
+<h1>4 Writing the ERB Template (lab4_template.html)
+</h1>
+<p>
+We use ERB templates to create formatted or templated text documents.
+An ERB file contains text and ERB tags that evaluate Ruby code. The
+Ruby code is placed inside ERB tags. ERB templates can be any form
+of text, including spreadsheets, form letters, email, or HTML.
+</p>
+<blockquote><tt><a name="tex2html1" href="http://www.ruby-doc.org/stdlib/libdoc/erb/rdoc/classes/ERB.html">http://www.ruby-doc.org/stdlib/libdoc/erb/rdoc/classes/ERB.html</a></tt></blockquote>
+<p>
+</p>
+<blockquote>ERB recognizes certain tags in the provided template and
+converts
+them based on the rules below:
+</blockquote>
+<p>
+</p>
+<pre>&lt;% Ruby code - inline with output %&gt; <br>&lt;%= Ruby expression - replace with result %&gt; <br>&lt;%# comment - ignored - useful in testing %&gt; <br>% a line of Ruby code - treated as &lt;% line %&gt; (optional - see ERB.new) <br>%% replaced with % if first thing on a line and % processing is used <br>&lt;%% or %%&gt; - replace with &lt;% or %&gt; respectively <br></pre>
+<blockquote>All other text is passed through ERB filtering unchanged.
+</blockquote>
+<p>
+</p>
+<h2>4.1 Creating the Header Labels (&lt;th&gt;)
+</h2>
+<p>
+HTML tables can have header labels. These labels are contained in
+&lt;th&gt;&lt;/th&gt; tags. We can use the @fields array in the
+lab4.cgi script to
+generate all of these tags inside the lab4_template.inc ERB file
+when it is evaluated.<br>
+</p>
+<p><br>
+</p>
+<pre># In lab4.cgi: <br><br>@fields = [ :number, :user_name, :password, :uid, :gid, :gcos_field,:home_directory, :login_shell, <br>:first_name,:last_name] <br><br># Inside lab4_template.erb<br>&lt;table&gt;<br> &lt;tr&gt; &lt;!- start the loop to get field names one at a time -&gt;<br> &lt;% @fields.each do |field| %&gt;<br> &lt;th&gt;&lt;a href="?sort_by=&lt;%= field %&gt;"&gt;&lt;%= field %&gt;&lt;/a&gt;&lt;/th&gt;<br> &lt;% end %&gt;<br> &lt;/tr&gt; &lt;!- End the loop -&gt;<br> more good stuff goes here<br>&lt;/table&gt;<br></pre>
+<p>
+</p>
+<h2>4.2 Creating a Row for Each Student
+</h2>
+<p>
+Once lab4.cgi has sorted that Student object you will have to display
+the information for each student. <b>You may use HTML (preferred) or
+plain text to do this.</b> However, the links to sort by field require
+HTML. See the following section for information how to display the data
+as plain text.
+</p>
+<p>If you decide to use plain text, you can enclose the data inside
+&lt;pre&gt;&lt;/pre&gt;
+tags to format the lines as you print them. You <i>cannot</i> use
+``Content-type: text/plain" for this lab because your links will
+NOT work. You must use ``Content-type: text/html" and use
+&lt;pre&gt;&lt;/pre&gt;
+tags to display the user information.
+</p>
+<br>
+<h2>The Plain Text Version
+</h2>
+<p>
+</p>
+<pre># Inherited from lab4.cgi: <br>@fields = [ :number, :user_name, :password, :uid, <br> :gid, :gcos_field,:home_directory, :login_shell, :first_name,:last_name] <br><br> <br># Inside lab4_template.inc<br>&lt;table&gt;<br> <i> &lt;tr&gt; &lt;!- start the loop to get field names one at a time -&gt;</i><br><i> &lt;% @fields.each do |field| %&gt;</i><br><i> &lt;th&gt;&lt;a href="?sort_by=&lt;%= field %&gt;"&gt;&lt;%= field %&gt;&lt;/a&gt;&lt;/th&gt;</i><br><i> &lt;% end %&gt;</i><br><i> &lt;/tr&gt; &lt;!- End the loop -&gt;<br>&lt;td&gt;<br></i><br><br> &lt;pre&gt;&lt;!- print student data using &lt;%= %&gt; tags, like this -&gt;<br> &lt;% students.each do |student| %&gt;<br> &lt;%= student.number %&gt; &lt;%= student.user_name %&gt; etc, etc, etc<br> &lt;% end %&gt;<br> &lt;/pre&gt;<br>&lt;/td&gt;<br>&lt;/tr&gt;<br>&lt;/table&gt;<br></pre>
+<p>
+</p>
+<h2>The HTML Version </h2>
+<p>
+</p>
+<pre># In lab4.cgi: <br>@fields = [ :number, :user_name, :password, :uid, :gid, :gcos_field,:home_directory, :login_shell, :first_name,:last_name] <br><br> <br># Inside lab4_template.inc<br>&lt;table&gt;<br> <i>&lt;tr&gt; &lt;!- start the loop to get field names one at a time -&gt;</i><br><i> &lt;% @fields.each do |field| %&gt;</i><br><i> &lt;th&gt;&lt;a href="?sort_by=&lt;%= field %&gt;"&gt;&lt;%= field %&gt;&lt;/a&gt;&lt;/th&gt;</i><br><i> &lt;% end %&gt;</i><br><i> &lt;/tr&gt; &lt;!- End the loop -&gt;</i><br><br> &lt;!- Display a row for each student -&gt;<br> &lt;% students.each do |student| %&gt;<br> &lt;tr&gt;&lt;td&gt;&lt;%= student.number %&gt;&lt;/td&gt;&lt;td&gt;&lt;%= student.user_name %&gt;&lt;/td&gt;&lt;td&gt;&lt;%= etc, etc, etc %&gt;&lt;/td&gt;&lt;/tr&gt;<br> &lt;% end %&gt;<br><br>&lt;/table&gt;</pre>
+<br>
+<p><span style="font-weight: bold;">Summary</span><br>
+Even though this lab does not require adding more than a dozen lines to
+your Lab 3 code, there are some new concepts that may require a little
+time to absorb. </p>
+<ul>
+<li>Using the CGI class to extract request information from the <code>ENV['QUERY_STRING']</code>.
+If
+this subject is new to you, check out <a href="http://smccd.mrooms.net/mod/resource/view.php?id=53298">CGI
+Programming for the World Wide Web</a>. </li>
+<li>Placing an object attributes into a Hash. This requires that you
+create a Hash using attribute names as Hash keys and attribute values
+as Hash values.</li>
+<li>Using Enumerable's <code>sort_by</code> method to sort the hash
+by a chosen field</li>
+</ul>
+This is a challenging lab, but most of the parts are in place in this
+document and in this week's readings.
+<p><strong>Working Example</strong><br>
+<a href="http://csmcis2.smccd.edu/%7Ecoolj/lab_4.cgi">Here's a working
+example</a>. Your code may behave differently. It is not necessary to
+color code the spr08 users, but feel free to do so if you want to
+increase the challenge-level. </p>
+<p>Have fun, and keep hacking... <br>
+</p>
+<p>--Doug</p>
+</div>
+</div> <!-- END DIV FOR ID CONTENT -->
+</div> <!-- END DIV FOR ID PAGE -->
+
+<!-- START OF FOOTER -->
+
+
+<div id="footer" class="clearfix">
+
+<div id="footer-left">
+<span class="helplink">
+</span><br>
+<a href="http://smccd.mrooms.net/mod/resource/view.php?inpopup=true&amp;id=8949"><img src="AssignmentLab4.php_files/helpbutton.png" alt="Support" longdesc="Contact Support" class="supportlink" border="0"></a>
+
+</div>
+
+<div id="footer-right">
+<a href="http://smccd.edu/"><img src="AssignmentLab4.php_files/smcccd.png" alt="SMCCCD" longdesc="San Mateo County Community College District" class="smccdlink" border="0" width="392" height="20"></a>
+<div class="logininfo">You are logged in as <a href="http://smccd.mrooms.net/user/view.php?id=158562&amp;course=32055">Puneet Kumar</a>   (<a href="http://smccd.mrooms.net/login/logout.php?sesskey=Zi8IGS5oYZ">Logout</a>)</div><div class="performanceinfo"><span class="timeused">0.096917 secs</span> <span class="memoryused">RAM: 2.3MB</span> <span class="memoryused">RAM peak: 2.5MB</span> <span class="included">Included 54 files</span> <span class="posixtimes">ticks: 10 user: 3 sys: 0 cuser: 0 csys: 0</span> <span class="serverload">Load average: 1.01</span> <span class="rcache">Record cache hit/miss ratio : 3/3</span> </div></div>
+
+
+</div> <!-- END DIV FOR ID FOOTER  -->
+ <!-- END DIV FOR ID WRAPPER  -->
+</body></html>

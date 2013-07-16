@@ -1,0 +1,341 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xml:lang="en-us" dir="ltr" xmlns="http://www.w3.org/1999/xhtml" lang="en-us"><head>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="exercise.php_files/styles.css">
+<link rel="stylesheet" type="text/css" href="exercise.php_files/styles_002.css">
+
+<!--[if IE 7]>
+    <link rel="stylesheet" type="text/css" href="http://smccd.mrooms.net/theme/standard/styles_ie7.css" />
+<![endif]-->
+<!--[if IE 6]>
+    <link rel="stylesheet" type="text/css" href="http://smccd.mrooms.net/theme/standard/styles_ie6.css" />
+<![endif]-->
+
+
+<meta name="keywords" content="moodle, 42507 - Spring 2011: Lab 2 -- Part 1 Exercises ">
+<title>42507 - Spring 2011: Lab 2 -- Part 1 Exercises</title>
+<link rel="shortcut icon" href="http://smccd.mrooms.net/theme/smccd_csm/favicon.ico">
+<script type="text/javascript" src="exercise.php_files/spellChecker.js"></script>
+<!--<style type="text/css">/*<![CDATA[*/ body{behavior:url(http://smccd.mrooms.net/lib/csshover.htc);} /*]]>*/</style>-->
+
+<script type="text/javascript" src="exercise.php_files/javascript-static.js"></script>
+<script type="text/javascript" src="exercise.php_files/javascript-mod.php"></script>
+<script type="text/javascript" src="exercise.php_files/overlib.js"></script>
+<script type="text/javascript" src="exercise.php_files/overlib_cssstyle.js"></script>
+<script type="text/javascript" src="exercise.php_files/cookies.js"></script>
+<script type="text/javascript" src="exercise.php_files/ufo.js"></script>
+<script type="text/javascript" src="exercise.php_files/dropdown.js"></script>  
+
+<script type="text/javascript" defer="defer">
+//<![CDATA[
+setTimeout('fix_column_widths()', 20);
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+function openpopup(url, name, options, fullscreen) {
+    var fullurl = "http://smccd.mrooms.net" + url;
+    var windowobj = window.open(fullurl, name, options);
+    if (!windowobj) {
+        return true;
+    }
+    if (fullscreen) {
+        windowobj.moveTo(0, 0);
+        windowobj.resizeTo(screen.availWidth, screen.availHeight);
+    }
+    windowobj.focus();
+    return false;
+}
+
+function uncheckall() {
+    var inputs = document.getElementsByTagName('input');
+    for(var i = 0; i < inputs.length; i++) {
+        inputs[i].checked = false;
+    }
+}
+
+function checkall() {
+    var inputs = document.getElementsByTagName('input');
+    for(var i = 0; i < inputs.length; i++) {
+        inputs[i].checked = true;
+    }
+}
+
+function inserttext(text) {
+  text = ' ' + text + ' ';
+  if ( opener.document.forms['theform'].message.createTextRange && opener.document.forms['theform'].message.caretPos) {
+    var caretPos = opener.document.forms['theform'].message.caretPos;
+    caretPos.text = caretPos.text.charAt(caretPos.text.length - 1) == ' ' ? text + ' ' : text;
+  } else {
+    opener.document.forms['theform'].message.value  += text;
+  }
+  opener.document.forms['theform'].message.focus();
+}
+
+function getElementsByClassName(oElm, strTagName, oClassNames){
+	var arrElements = (strTagName == "*" && oElm.all)? oElm.all : oElm.getElementsByTagName(strTagName);
+	var arrReturnElements = new Array();
+	var arrRegExpClassNames = new Array();
+	if(typeof oClassNames == "object"){
+		for(var i=0; i<oClassNames.length; i++){
+			arrRegExpClassNames.push(new RegExp("(^|\\s)" + oClassNames[i].replace(/\-/g, "\\-") + "(\\s|$)"));
+		}
+	}
+	else{
+		arrRegExpClassNames.push(new RegExp("(^|\\s)" + oClassNames.replace(/\-/g, "\\-") + "(\\s|$)"));
+	}
+	var oElement;
+	var bMatchesAll;
+	for(var j=0; j<arrElements.length; j++){
+		oElement = arrElements[j];
+		bMatchesAll = true;
+		for(var k=0; k<arrRegExpClassNames.length; k++){
+			if(!arrRegExpClassNames[k].test(oElement.className)){
+				bMatchesAll = false;
+				break;
+			}
+		}
+		if(bMatchesAll){
+			arrReturnElements.push(oElement);
+		}
+	}
+	return (arrReturnElements)
+}
+//]]>
+</script>
+</head><body class="mod-resource course-32055 dir-ltr lang-en_us_utf8" id="mod-resource-view">
+<div id="wrapper">
+<div id="page">
+<!-- START WHAT APPEARS ON ALL OTHER PAGES -->
+<div id="header" class="clearfix">
+	<div id="headersubpage-image">
+  		<div id="headersubpage-image-right">
+    	<h1 class="headermain">CIS - 113 - 42507 - Internet Programming: Ruby - Spring 2011</h1>
+    		<div class="headermenu"> <a href="http://collegeofsanmateo.edu/"><img src="exercise.php_files/logo.png" alt="College of San Mateo" longdesc="College of San Mateo Logo" border="0"></a>
+      		<p></p>
+      		<p></p>
+      		<div class="navigation">
+<ul><li><form action="http://smccd.mrooms.net/mod/resource/view.php" onclick="this.target='_top';"><fieldset class="invisiblefieldset"><input name="id" value="202640" type="hidden"><button type="submit" title="Previous activity"><span class="arrow ">◄</span><span class="accesshide ">&nbsp;Previous activity</span></button></fieldset></form></li><li><form action="http://smccd.mrooms.net/course/jumpto.php" method="get" id="navmenupopup" class="popupform"><div><select id="navmenupopup_jump" name="jump" onchange="self.location=document.getElementById('navmenupopup').jump.options[document.getElementById('navmenupopup').jump.selectedIndex].value;">
+   <option value="http://smccd.mrooms.net/mod/resource/view.php?id=173081" style="background-image: url(&quot;http://smccd.mrooms.net/theme/smccd_csm/pix/mod/resource/icon.gif&quot;);">CIS 113 Syllabus</option>
+   <option value="http://smccd.mrooms.net/mod/resource/view.php?id=190926" style="background-image: url(&quot;http://smccd.mrooms.net/theme/smccd_csm/pix/mod/resource/icon.gif&quot;);">Course Description</option>
+   <option value="http://smccd.mrooms.net/mod/forum/view.php?id=173074" style="background-image: url(&quot;http://smccd.mrooms.net/theme/smccd_csm/pix/mod/forum/icon.gif&quot;);">NEWS FORUM</option>
+   <option value="http://smccd.mrooms.net/mod/forum/view.php?id=173102" style="background-image: url(&quot;http://smccd.mrooms.net/theme/smccd_csm/pix/mod/forum/icon.gif&quot;);">INTRODUCTIONS</option>
+   <option value="http://smccd.mrooms.net/mod/forum/view.php?id=173078" style="background-image: url(&quot;http://smccd.mrooms.net/theme/smccd_csm/pix/mod/forum/icon.gif&quot;);">LABS AND ASSIGNMENTS</option>
+   <option value="http://smccd.mrooms.net/mod/forum/view.php?id=173079" style="background-image: url(&quot;http://smccd.mrooms.net/theme/smccd_csm/pix/mod/forum/icon.gif&quot;);">GENERAL DISCUSSION</option>
+   <option value="http://smccd.mrooms.net/mod/chat/view.php?id=173075" style="background-image: url(&quot;http://smccd.mrooms.net/theme/smccd_csm/pix/mod/chat/icon.gif&quot;);">Study Group Chat</option>
+   <option value="http://smccd.mrooms.net/mod/resource/view.php?id=173084" style="background-image: url(&quot;http://smccd.mrooms.net/theme/smccd_csm/pix/mod/resource/icon.gif&quot;);">Coursework Demo Web Site</option>
+   <option value="http://smccd.mrooms.net/mod/resource/view.php?id=194596" style="background-image: url(&quot;http://smccd.mrooms.net/theme/smccd_csm/pix/mod/resource/icon.gif&quot;);">Programming Ruby First Ed</option>
+   <option value="http://smccd.mrooms.net/mod/resource/view.php?id=173093" style="background-image: url(&quot;http://smccd.mrooms.net/theme/smccd_csm/pix/mod/resource/icon.gif&quot;);">Why's Poignant Guide to Ruby</option>
+   <option value="http://smccd.mrooms.net/mod/resource/view.php?id=173086" style="background-image: url(&quot;http://smccd.mrooms.net/theme/smccd_csm/pix/mod/resource/icon.gif&quot;);">SSH, Logging In to Linux, and Linux Commands</option>
+   <option value="http://smccd.mrooms.net/mod/resource/view.php?id=173087" style="background-image: url(&quot;http://smccd.mrooms.net/theme/smccd_csm/pix/mod/resource/icon.gif&quot;);">Ruby Resources</option>
+   <option value="http://smccd.mrooms.net/mod/resource/view.php?id=173088" style="background-image: url(&quot;http://smccd.mrooms.net/theme/smccd_csm/pix/mod/resource/icon.gif&quot;);">HTML Basics</option>
+   <option value="http://smccd.mrooms.net/mod/resource/view.php?id=173089" style="background-image: url(&quot;http://smccd.mrooms.net/theme/smccd_csm/pix/mod/resource/icon.gif&quot;);">CGI Basics</option>
+   <option value="http://smccd.mrooms.net/mod/resource/view.php?id=173090" style="background-image: url(&quot;http://smccd.mrooms.net/theme/smccd_csm/pix/mod/resource/icon.gif&quot;);">Online Library Resource Access Letter</option>
+   <option value="http://smccd.mrooms.net/mod/resource/view.php?id=173091" style="background-image: url(&quot;http://smccd.mrooms.net/theme/smccd_csm/pix/mod/resource/icon.gif&quot;);">Online Library Application Form</option>
+   <option value="http://smccd.mrooms.net/mod/resource/view.php?id=173094" style="background-image: url(&quot;http://smccd.mrooms.net/theme/smccd_csm/pix/mod/resource/icon.gif&quot;);">Ruby Best Practices</option>
+   <optgroup label="Week 1">   <option value="http://smccd.mrooms.net/mod/resource/view.php?id=173105" style="background-image: url(&quot;http://smccd.mrooms.net/theme/smccd_csm/pix/mod/resource/icon.gif&quot;);">Lab 0: Installing Ruby</option>
+   <option value="http://smccd.mrooms.net/mod/resource/view.php?id=173104" style="background-image: url(&quot;http://smccd.mrooms.net/theme/smccd_csm/pix/mod/resource/icon.gif&quot;);">Install Ruby on Your Computer</option>
+   <option value="http://smccd.mrooms.net/mod/resource/view.php?id=173103" style="background-image: url(&quot;http://smccd.mrooms.net/theme/smccd_csm/pix/mod/resource/icon.gif&quot;);">Assignment: irb --- Warming up to Ruby</option>
+   <option value="http://smccd.mrooms.net/mod/quiz/view.php?id=173106" style="background-image: url(&quot;http://smccd.mrooms.net/theme/smccd_csm/pix/mod/quiz/icon.gif&quot;);">Sanity Check for Week 1</option>
+   </optgroup>   <optgroup label="Week 2">   <option value="http://smccd.mrooms.net/mod/resource/view.php?id=173108" style="background-image: url(&quot;http://smccd.mrooms.net/theme/smccd_csm/pix/mod/resource/icon.gif&quot;);">A First Ruby Script</option>
+   <option value="http://smccd.mrooms.net/mod/resource/view.php?id=173110" style="background-image: url(&quot;http://smccd.mrooms.net/theme/smccd_csm/pix/mod/resource/icon.gif&quot;);">Using SecureShell SSH Client to Log in to CSMCIS2</option>
+   <option value="http://smccd.mrooms.net/mod/resource/view.php?id=173111" style="background-image: url(&quot;http://smccd.mrooms.net/theme/smccd_csm/pix/mod/resource/icon.gif&quot;);">Changing your Linux account password</option>
+   <option value="http://smccd.mrooms.net/mod/resource/view.php?id=173119" style="background-image: url(&quot;http://smccd.mrooms.net/theme/smccd_csm/pix/mod/resource/icon.gif&quot;);">Lab 1: A First Ruby Script</option>
+   <option value="http://smccd.mrooms.net/mod/assignment/view.php?id=199495" style="background-image: url(&quot;http://smccd.mrooms.net/theme/smccd_csm/pix/mod/assignment/icon.gif&quot;);">Lab 1 Upload (due Feb 14)</option>
+   <option value="http://smccd.mrooms.net/mod/quiz/view.php?id=173120" style="background-image: url(&quot;http://smccd.mrooms.net/theme/smccd_csm/pix/mod/quiz/icon.gif&quot;);">Sanity Check for Week 2</option>
+   </optgroup>   <optgroup label="Week 3">   <option value="http://smccd.mrooms.net/mod/resource/view.php?id=173122" style="background-image: url(&quot;http://smccd.mrooms.net/theme/smccd_csm/pix/mod/resource/icon.gif&quot;);">Week 3: Ruby's Building Blocks: Data, Expressions,...</option>
+   <option value="http://smccd.mrooms.net/mod/resource/view.php?id=173124" style="background-image: url(&quot;http://smccd.mrooms.net/theme/smccd_csm/pix/mod/resource/icon.gif&quot;);">Ruby Basics, Ruby Hashes, Ruby Blocks and Procs</option>
+   <option value="http://smccd.mrooms.net/mod/resource/view.php?id=201159" style="background-image: url(&quot;http://smccd.mrooms.net/theme/smccd_csm/pix/mod/resource/icon.gif&quot;);">Ruby Hashes</option>
+   <option value="http://smccd.mrooms.net/mod/quiz/view.php?id=173131" style="background-image: url(&quot;http://smccd.mrooms.net/theme/smccd_csm/pix/mod/quiz/icon.gif&quot;);">Sanity Check for Week 3</option>
+   </optgroup>   <optgroup label="Week 4">   <option value="http://smccd.mrooms.net/mod/resource/view.php?id=173138" style="background-image: url(&quot;http://smccd.mrooms.net/theme/smccd_csm/pix/mod/resource/icon.gif&quot;);">Week 4: WWCDWWWKN</option>
+   <option value="http://smccd.mrooms.net/mod/resource/view.php?id=202631" style="background-image: url(&quot;http://smccd.mrooms.net/theme/smccd_csm/pix/mod/resource/icon.gif&quot;);">HTML Basic Skills</option>
+   <option value="http://smccd.mrooms.net/mod/resource/view.php?id=202640" style="background-image: url(&quot;http://smccd.mrooms.net/theme/smccd_csm/pix/mod/resource/icon.gif&quot;);">Lab 2 -- Part 1: Ruby CGI Scripts</option>
+   <option value="http://smccd.mrooms.net/mod/resource/view.php?id=202635" selected="selected" style="background-image: url(&quot;http://smccd.mrooms.net/theme/smccd_csm/pix/mod/resource/icon.gif&quot;);">Jump to...</option>
+   <option value="http://smccd.mrooms.net/mod/assignment/view.php?id=173145" style="background-image: url(&quot;http://smccd.mrooms.net/theme/smccd_csm/pix/mod/assignment/icon.gif&quot;);">Lab 2 -- Part 1 Upload</option>
+   <option value="http://smccd.mrooms.net/mod/quiz/view.php?id=173144" style="background-image: url(&quot;http://smccd.mrooms.net/theme/smccd_csm/pix/mod/quiz/icon.gif&quot;);">Sanity Check for Week 4</option>
+   </optgroup>   <optgroup label="Week 5">   <option value="http://smccd.mrooms.net/mod/resource/view.php?id=202643" style="background-image: url(&quot;http://smccd.mrooms.net/theme/smccd_csm/pix/mod/resource/icon.gif&quot;);">Week 5: Lab 2 -- Part 2</option>
+   <option value="http://smccd.mrooms.net/mod/resource/view.php?id=173141" style="background-image: url(&quot;http://smccd.mrooms.net/theme/smccd_csm/pix/mod/resource/icon.gif&quot;);">Lab 2 -- Part 2: Text Analyzer CGI Script</option>
+   <option value="http://smccd.mrooms.net/mod/resource/view.php?id=173143" style="background-image: url(&quot;http://smccd.mrooms.net/theme/smccd_csm/pix/mod/resource/icon.gif&quot;);">Inaugural Speeches for Analysis</option>
+   <option value="http://smccd.mrooms.net/mod/resource/view.php?id=173139" style="background-image: url(&quot;http://smccd.mrooms.net/theme/smccd_csm/pix/mod/resource/icon.gif&quot;);">Lab 2 Example Output</option>
+   <option value="http://smccd.mrooms.net/mod/resource/view.php?id=173149" style="background-image: url(&quot;http://smccd.mrooms.net/theme/smccd_csm/pix/mod/resource/icon.gif&quot;);">Classes and Objects</option>
+   <option value="http://smccd.mrooms.net/mod/assignment/view.php?id=202654" style="background-image: url(&quot;http://smccd.mrooms.net/theme/smccd_csm/pix/mod/assignment/icon.gif&quot;);">Lab 2 -- Part 2 Upload</option>
+   <option value="http://smccd.mrooms.net/mod/quiz/view.php?id=173150" style="background-image: url(&quot;http://smccd.mrooms.net/theme/smccd_csm/pix/mod/quiz/icon.gif&quot;);">Sanity Check for Week 5</option>
+    </optgroup></select><input name="sesskey" value="g4BM3pzmQ2" type="hidden"><div id="noscriptnavmenupopup" style="display: none;"><input value="Go" type="submit"></div><script type="text/javascript">
+//<![CDATA[
+document.getElementById("noscriptnavmenupopup").style.display = "none";
+//]]>
+</script></div></form></li><li><form action="http://smccd.mrooms.net/mod/assignment/view.php" onclick="this.target='_top';"><fieldset class="invisiblefieldset"><input name="id" value="173145" type="hidden"><button type="submit" title="Next activity"><span class="accesshide ">Next activity&nbsp;</span><span class="arrow ">►</span></button></fieldset></form></li></ul>
+</div></div>
+  		</div>
+	</div>
+
+<!-- END WHAT APPEARS ON ALL OTHER PAGES -->
+<div class="navbar clearfix">
+  <div class="breadcrumb"><h2 class="accesshide ">You are here</h2> <ul>
+<li class="first"><a onclick="this.target='_top'" href="http://smccd.mrooms.net/">Web Access</a></li><li> <span class="accesshide ">/&nbsp;</span><span class="arrow sep">►</span> <a onclick="this.target='_top'" href="http://smccd.mrooms.net/course/view.php?id=32055">42507 - Spring 2011</a></li><li> <span class="accesshide ">/&nbsp;</span><span class="arrow sep">►</span> <a onclick="this.target='_top'" href="http://smccd.mrooms.net/mod/resource/index.php?id=32055">Resources</a></li><li> <span class="accesshide ">/&nbsp;</span><span class="arrow sep">►</span> Lab 2 -- Part 1 Exercises</li></ul></div>
+  <div class="navbutton">&nbsp;</div>
+</div>
+</div>
+<!-- END OF HEADER -->
+<div id="content">
+<div class="box generalbox generalboxcontent boxaligncenter clearfix">
+<div id="content">
+  <div class="box generalbox generalboxcontent boxaligncenter clearfix">
+    <h1><a name="exercises">EXERCISES</a></h1>
+    <h1><a name="exercises"></a></h1>
+    <h2>1 Hello, world!</h2>
+    <ol>
+      <li>Install a CGI script named hello_world.cgi that prints a traditional "Hello, word!" proof of life. </li>
+      <li>Put your script into your CSMCIS2 public_html directory.</li>
+      <li>View it a the URL http://csmcis2.smccd.edu/~YOURNAME/hello_world.cgi</li>
+    </ol> hello_world.cgi<br> <br> <pre>#!/usr/local/bin/ruby
+# SCRIPT: hello_world.cgi
+# CREATOR: YOURNAME
+
+puts "Content-type: text/html"
+puts # This blank line is mandatory
+puts &lt;&lt;HTML
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+ &lt;title&gt;A First Ruby CGI Script&lt;/title&gt;
+ &lt;style type="text/css"&gt;
+ body {background-color:#333;color:#fff;font-family:Helvetica,Arial,Verdana,sans-serif;font-size:18px;}
+ h1 {color:#c00}
+ &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+ &lt;h1&gt;Hello, world!&lt;/h1&gt;
+ &lt;p&gt;
+ This is an example of a Ruby CGI script. It has the following features.
+ &lt;/p&gt;
+ &lt;ol&gt;
+ &lt;li&gt;A shebang line&lt;/li&gt;
+ &lt;li&gt;A MIME type (&lt;code&gt;text/html&lt;/code&gt;)&lt;/li&gt;
+ &lt;li&gt;A blank line after the Content-type line.&lt;/li&gt;
+ &lt;li&gt;Some HTML to format the text&lt;/li&gt;
+ &lt;/ol&gt;
+ &lt;/body&gt;
+&lt;/html&gt;
+HTML
+</pre> Example: <a href="http://hills.ccsf.edu/%7Edputnam/hello_world.cgi">http://csmcis2.smccd.edu/~coolj/hello_world.cgi</a><br>
+    <h2>2 Oliver Twist</h2>
+    <ol>
+      <li>Create a file named oliver_twist.txt</li>
+      <li>Create a CGI script name oliver_twist.cgi and put it into you cgi-bin directory.</li>
+      <li>oliver_twist.cgi should display the text in oliver_twist.txt at this URL: http://csmcis2.smccd.edu/~YOURNAME/oliver_twist.cgi<br> </li>
+    </ol> <br> oliver_twist.txt should contain:<br> <pre>Although I am not disposed to maintain that the being born in a workhouse, is in itself the most fortunate and enviable
+circumstance that can possibly befall a human being, I do mean to say that in this particular instance, it was the best
+thing for Oliver Twist that could by possibility have occurred. The fact is, that there was considerable difficulty in
+inducing Oliver to take upon himself the office of respiration,— a troublesome practice, but one which custom has rendered
+necessary to our easy existence; and for some time he lay gasping on a little flock mattress, rather unequally poised
+between this world and the next: the balance being decidedly in favour of the latter. Now, if, during this brief period,
+Oliver had been surrounded by careful grandmothers, anxious aunts, experienced nurses, and doctors of profound wisdom, he
+would most inevitably and indubitably have been killed in no time. There being nobody by, however, but a pauper old woman,
+who was rendered rather misty by an unwonted allowance of beer; and a parish surgeon who did such matters by contract;
+Oliver and Nature fought out the point between them. The result was, that, after a few struggles, Oliver breathed, sneezed,
+and proceeded to advertise to the inmates of the workhouse the fact of a new burden having been imposed upon the parish, by
+setting up as loud a cry as could reasonably have been expected from a male infant who had not been possessed of that very
+useful appendage, a voice, for a much longer space of time than three minutes and a quarter.
+
+(from Oliver Twist by Charles Dickens)
+
+
+Example: <a href="http://hills.ccsf.edu/%7Edputnam/oliver_twist.cgi"></a><a href="http://csmcis2.smccd.edu/%7Ecoolj/oliver_twist.cgi">http://csmcis2.smccd.edu/~coolj/oliver_twist.cgi</a> </pre>
+    <h2>3 QUERY_STRING</h2> In this exercise we will use the Ruby CGI 
+class to process the key/value pairs of data in a QUERY_STRING. Install 
+the query_string.cgi script below into your CSMCIS2 public_html 
+directory;<br> <br>
+    <h4>QUERY_STRING</h4> The QUERY_STRING is the information encoded as
+ key=value data pairs. The QUERY_STRING is the part of the URL that 
+follows the '?' character. For example, <br> <big><br style="font-family: monospace;"> <span style="font-family: monospace;">http://yourdomain.com/index.cgi<big><span style="color: rgb(0, 153, 0); font-weight: bold;">?color=red&amp;size=small&amp;price=1000</span></big></span></big><br> <br> We can use the CGI class to extract this information from the request and make it available to our script.<br> <br> <pre>#!/usr/local/bin/ruby
+# SCRIPT: query_string.cgi
+# CREATOR: YOURNAME
+
+# The CGI class provide methods to handle CGI request, including
+# the CGI::params, which contains all of the request data.
+require 'cgi'
+cgi = CGI.new
+
+# Check to see if a link has been clicked
+if cgi.params['color'].empty?
+ background = 'blue'
+ color = 'gold'
+else
+ color = cgi.params['color'].to_s
+ background = cgi.params['background'].to_s
+end
+
+puts "Content-type: text/html"
+puts # This blank line is mandatory
+
+# Start printing the text
+puts &lt;&lt;HTML
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+ &lt;title&gt;A First Ruby CGI Script&lt;/title&gt;
+ &lt;style type="text/css"&gt;
+ body { background-color:#{background}; color:#{color}; width:800px; margin:2em auto;
+ padding:2em; font-family:Helvetica,Arial,Verdana,sans-serif; font-size:18px;}
+ h1 {color:#c00}
+ a {color:cyan;}
+ &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+ &lt;h1&gt;QUERY_STRING EXAMPLE&lt;/h1&gt;
+ &lt;p&gt;
+ This is an example of a Ruby CGI script that can process a request's QUERY_STRING. The links below each
+have a QUERY_STRING encoded. When a user clicks on a link, the browser submits the QUERY_STRING.
+ &lt;/p&gt;
+&lt;p&gt;&lt;a href="?color=red&amp;background=orange"&gt;RED/ORANGE&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="?color=blue&amp;background=gray"&gt;BLUE/GRAY&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="?color=lightgreen&amp;background=black"&gt;GREEN/BLACK&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="?color=gold&amp;background=blue"&gt;GOLD/BLUE&lt;/a&gt;&lt;/p&gt;
+ &lt;/p&gt;
+ &lt;/body&gt;
+&lt;/html&gt;
+HTML
+
+
+</pre> Example: <a href="http://csmcis2.smccd.edu/%7Ecoolj/query_string.cgi">http://csmcis2.smccd.edu/~coolj/query_string.cgi</a><br>
+    <h2>4 FORMS</h2> The CGI::params method works with forms (POST 
+requests) as well as with links (GET requests). Using the HTML form 
+below, create a script named <big><span style="font-family: monospace;">form.cgi</span></big> in your CSMCIS2 public_html directory. Process the form data to do the following:<br> <br> Print the username and email address in this fashion: <br> <br style="font-style: italic;"> <big style="font-style: italic;">Welcome &lt;username&gt;. It's good to see you again. <br> May I send many emails to you at your email address: &lt;email address&gt;?</big><br> <br> Use this form in your script:<br> <br> <pre>&lt;form action="" method="post" accept-charset="utf-8"&gt;
+&lt;p&gt;
+&lt;label for="User Name" style="width:100px;float:left"&gt;User Name&lt;/label&gt;
+&lt;input type="text" name="user_name" value="" id="user_name"&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;label for="email" style="width:100px;float:left"&gt;Email&lt;/label&gt;
+&lt;input type="text" name="email" value="" id="email"&gt;
+&lt;p&gt;
+&lt;p&gt;&lt;input type="submit" value="Continue &amp;rarr;"&gt;&lt;/p&gt;
+&lt;/form&gt;
+
+</pre> Example: <a href="http://csmcis2.smccd.edu/%7Ecoolj/form.cgi">http://csmcis2.smccd.edu/~coolj/form.cgi</a> </div></div> </div><div class="modified">Last modified: Monday, February  14, 2011, 11:58 AM</div>
+</div> <!-- END DIV FOR ID CONTENT -->
+</div> <!-- END DIV FOR ID PAGE -->
+
+<!-- START OF FOOTER -->
+
+
+<div id="footer" class="clearfix">
+
+<div id="footer-left">
+<span class="helplink">
+</span><br>
+<a href="http://smccd.mrooms.net/mod/resource/view.php?inpopup=true&amp;id=8949"><img src="exercise.php_files/helpbutton.png" alt="Support" longdesc="Contact Support" class="supportlink" border="0"></a>
+
+</div>
+
+<div id="footer-right">
+<a href="http://smccd.edu/"><img src="exercise.php_files/smcccd.png" alt="SMCCCD" longdesc="San Mateo County Community College District" class="smccdlink" border="0" width="392" height="20"></a>
+<div class="logininfo">You are logged in as <a href="http://smccd.mrooms.net/user/view.php?id=158562&amp;course=32055">Puneet Kumar</a>   (<a href="http://smccd.mrooms.net/login/logout.php?sesskey=g4BM3pzmQ2">Logout</a>)</div><div class="performanceinfo"><span class="timeused">0.095412 secs</span> <span class="memoryused">RAM: 3.5MB</span> <span class="memoryused">RAM peak: 3.8MB</span> <span class="included">Included 50 files</span> <span class="posixtimes">ticks: 10 user: 6 sys: 0 cuser: 0 csys: 0</span> <span class="serverload">Load average: 0.59</span> <span class="rcache">Record cache hit/miss ratio : 4/3</span> </div></div>
+
+
+</div> <!-- END DIV FOR ID FOOTER  -->
+</div> <!-- END DIV FOR ID WRAPPER  -->
+</body></html>

@@ -1,0 +1,1052 @@
+/**************************************
+ * THEME NAME: smccd_csm
+ *
+ * Files included in this sheet:
+ *
+ *   smccd_csm/styles_elegance.css
+ *   smccd_csm/styles_01.css
+ **************************************/
+
+/***** smccd_csm/styles_elegance.css start *****/
+
+/******************************************************************
+
+	Name: Elegance
+	Description: Elegance is a fluid-wdith, three-column theme for Moodle.
+	Theme URL: http://newschoollearning.com/themes/elegance/
+	Support URL: http://support.newschoollearning.com/
+	Author: Patrick Malley
+	Author URI: http://newschoollearning.com
+	Version: 1.1
+
+  Note: Customize, edit, poke, prod, and adapt to your needs.
+  However, do not share.  Unless other arrangements have been made,
+  this style sheet (regardless of modification) remains the 
+  property of NewSchool Learning and is licensed for use
+  on a single installation of Moodle.
+ 
+*******************************************************************/
+
+form {
+	margin:0;
+	padding:0;
+}
+
+html, body {
+  background: #FFF;   
+  font-family: Arial, Helvetica, Geneva, sans-serif;
+  color: #333333;
+  margin:0;
+  padding:0;
+}
+
+
+body, table, td, th, li {
+  line-height:1.5;
+}
+
+#page {
+  margin: 0 15px;
+  background: #FFFFFF;
+}
+
+#content {
+  background: #ffffff;
+  padding:0;
+  padding-bottom:20px;
+  font-size: 0.9em;
+}
+
+#wrapper{
+  background: #FFF url(pix/bg/bg_top.png) repeat-x;  
+}
+
+
+#layout-table {
+  margin: 0 !important;
+  padding: none !important;
+  border-collapse: collapse;
+}
+
+
+
+#middle-column
+{
+  background: url(pix/bg/bg_rtcorner.gif) no-repeat top left;
+}
+
+#coursesearchnavbar 
+{
+color:#FFFFFF;
+}
+
+.accesshide
+{
+color:#FFFFFF;
+}
+
+p {
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+h2.headingblock {
+  border: none;
+  
+  margin: 0 20px;
+}
+
+#course-index-index .categorybox,
+#course-index .categorybox {
+  margin: 0 200px;
+}
+
+.categorybox .course {
+  font-size: 0.9em;
+}
+
+.courseboxes {
+  margin: 5px 100px;
+}
+
+.categorybox,
+.coursebox {
+  border: none;
+  padding-bottom: 13px;
+  margin: auto;
+  background: none !important;
+  border: none !important;
+}
+
+.coursesearchbox {
+  background: none !important;
+  border: none !important;
+  font-size: 12px;
+}
+.categorylist {
+  margin: 5px 0;
+  width: 100%;
+}
+
+h1 {line-height:1.4em;}
+h2 {line-height:1.3em;}
+h3 {line-height:1.2em;}
+
+h2.main,
+h3.main {
+  margin-top: 0;
+  padding-top: 20px;
+}
+
+.generalbox {
+  width: 80%;
+  border: 1px solid #eee;
+  background: #f9f9f9;
+  margin: 20px auto;
+}
+
+#intro.box {
+  border: 1px solid #eee !important;
+}
+
+.generaltable {
+  margin-bottom:0 !important;
+}
+
+.generaltable tbody tr td {
+  padding: 3px !important;
+}
+
+textarea {
+	width: 100%;
+}
+
+ul li,
+ol li {
+  margin-left:2em;
+}
+
+ul, ol {
+  padding-bottom:10px;
+}
+
+blockquote {
+    margin:1em 3em;
+    padding:0 0 0 4px;  
+    color:#666;
+    border-left:2px solid #999;
+}
+
+/*****************
+*  Header  *
+*****************/
+
+#header {
+  background: #FFF url(pix/bg/bg_top_header.png) repeat-x;
+  height: 147px;
+}
+
+.header-logo
+{
+margin-top:0px;
+margin-right:20px;
+margin-left:auto;
+background: url(pix/bg/logo.png) no-repeat;
+width: 260px;
+height: 20px;
+padding-bottom:5px;
+}
+
+#header-top {
+  height: 75px;
+}
+
+#header .logininfo {
+  color: #7f7971;
+}
+
+#header .headermenu{
+margin-right:15px;
+ margin-top:25px;
+ color:#FFFFFF;
+}
+
+#header .headermenu a{
+ color:#ffb311;
+}
+
+#header-home .headermain {
+  margin-top:10px;
+  font-size: 2em 'lucida grande', 'lucida sans unicode', sans-serif;
+  font-weight: normal;
+  color: #FFFFFF;
+}
+
+#header .headermain {
+  margin: 80px 0px 0px 25px;
+  font-size: .86em;
+   font-weight: normal;
+  color: #7f7971;
+}
+
+#header-bottom {
+  height: 216px;
+    background: url(pix/bg/bg_header_gradient.png) repeat-x;
+}
+
+#header-image {
+	height: 105px;
+	background: url(pix/bg/header.png) no-repeat left;
+}
+
+#headersubpage-image {
+  background: url(pix/bg/header_subpage.png) no-repeat top left;
+  height: 105px;
+}
+
+#headersubpage-image-right {
+  background: url(pix/bg/header_subpage_right.png) no-repeat top right ;
+  height: 105px;
+}
+
+#header-box {
+  padding: 35px 20px 0 275px;
+  color: #fff;
+  font-size: 0.9em;
+}
+
+#header-box h2 {
+  font-size: 1.2em;
+  margin-bottom: 7px;
+}
+
+/*  Breadcrumb */
+
+.navbar {
+border: none;
+height:28px;
+margin-top:2px;
+
+}
+
+#navbar-wrap-1 {
+  background: url(pix/bg/bg_breadcrumb_gradient.png) repeat-x top;
+}
+
+#navbar-wrap-2 {
+  background: url(pix/bg/bg_breadcrumb_right.png) no-repeat top right;
+}
+
+.breadcrumb ul li {
+  color: #ffffff;
+  margin: 0;
+  font-weight:bold;
+}
+
+.breadcrumb ul li .sep {
+  font-size: 0.8em;
+  color: #545454;
+  padding:0 4px;
+}
+
+.navbutton {margin-top:0 !important;}
+
+/*****************
+*  Footer  *
+*****************/
+
+#footer {
+ 
+  bottom: 0;
+  margin: 0 !important;
+  padding: 0;
+  background: #f1efe3 url(pix/bg/bg_footer.png) repeat-x;
+  height: 150px;
+}
+
+#footer-wrap-1 {
+	  	  background: url(pix/bg/bg_footer_gradient.png) repeat-x top;
+
+}
+
+#footer-wrap-2 {
+		  background: url(pix/bg/bg_footer_right.png) no-repeat top right;
+}
+
+#footer-right{
+float:right;
+text-align:right;
+margin-top:15px;
+}
+
+#footer-left{
+float:left;
+text-align:left;
+margin-top:15px;
+}
+
+
+#footer .logininfo {
+margin: 2px 10px 2px 0px;
+color: #7f7971;
+}
+
+.homelink {
+  margin: 1em 0;
+}
+
+.smccdlink{
+margin:2px 10px 2px 0px;
+}
+.supportlink{
+margin:10px 0px 2px 10px;
+}
+
+.sitelink {
+display: none;
+}
+
+#footer .helplink {
+margin:10px 0px 2px 10px;
+}
+
+#credits {
+text-align: center;
+clear:both;
+padding-top:60px;
+font-size:0.8em;
+}
+
+#credits a:link,
+#credits a:visited {
+  color:#e0e0e0;
+}
+
+#credits a:hover,
+#credits a:active {
+  color: #336699;
+}
+
+
+/*****************
+*  Side Blocks  *
+*****************/
+
+.sideblock {
+  width: 212px !important;
+}
+
+.sideblock ul li {
+  margin-left:0;
+}
+
+.sideblock .content {
+  background: none;
+  border: none;
+  font-size: 0.9em;
+  padding-top: 0;
+}
+
+.sideblock .header {
+  border: none;
+}
+
+.sideblock .content h2 {margin-top:0;}
+.block_news_items .head {
+  margin-top:0 !important;
+  padding-top:5px;
+}
+
+.block_rss_client .list li .link {
+	border: none;
+}
+
+.block_loancalc h1 {display: none;} /* should not be there */
+
+/** Left Column **/
+
+
+#left-column .sideblock .title {
+  border-bottom: 1px solid;
+  margin: 0 10px 0 3px;
+  padding:3px 3px 1px 1px;
+  font-size:1.4em;
+}
+
+#left-column .sideblock .content {
+    margin: 0 10px 0 5px;
+}
+
+#left-column .content ul li {
+  padding:4px 0;
+  border-bottom: 1px dotted;
+}
+
+#left-column .content ul li a {
+}
+
+#left-column .sideblock .header {
+  border: none;
+}
+
+.block_calendar_month .content .filters table {
+  background: none;
+}
+
+/** Right Column **/
+
+#right-column {
+  padding: 15px 7px 0 0;
+}
+
+#right-column .sideblock .content {
+  border-left: 1px solid;
+  border-right: 1px solid;
+  padding-left:10px;
+
+}
+
+#right-column .sideblock {
+  background: url(pix/bg/bg_sideblock_bottom.png) no-repeat bottom;
+  padding-bottom: 13px;
+}
+
+#right-column .sideblock .header {
+  background: url(pix/bg/bg_sideblock_top.png) no-repeat top;
+  padding-bottom:5px;
+  border:none;
+}
+
+#right-column .sideblock .title {
+  padding:3px 3px 5px;
+  text-align: center;
+  color: #444444;
+  font-size: 1.2em;
+}
+
+
+input.hide-show-image {
+	padding-top:5px;
+}
+#right-column .sideblock .title input.hide-show-image {
+  display: none; /* jut because I think it's ugly */
+}
+
+/********************
+*  Login Block *
+*******************
+
+.block_login .header,
+.block_login .footer {
+  display: none;
+}
+
+.block_login {
+  background: url(pix/bg/bg_login.png) no-repeat top left !important;
+  position: absolute;
+  top: 35px;
+  width: 350px !important;
+  right: 25px;
+  font-size: 1em;
+}
+
+.block_login .content {
+  display: block;
+  height: 100%;
+  padding:7px 0;
+  border: none !important;
+  background: none !important;
+}
+
+.block_login .loginform .c1 input {
+  font-size: 0.8em;;
+}
+
+.block_login .loginform .c1 {
+  float: left;
+  color: #fff;
+  font-weight: bold;
+  margin:4px 3px 4px;
+}
+*/
+/*********************
+*  Forums  *
+*********************/
+
+.forumpost {
+  border: none;
+  padding:10px;
+  margin-left:10px;
+}
+
+#blog-index .sideblock {
+  margin: 20px;
+}
+
+.forumpost .picture,
+.eventlist .picture {
+  background:  url(pix/forum/bg_forum_top_left.png) no-repeat top right;
+  vertical-align: bottom;
+  padding: 0 19px 0 0 !important;
+}
+
+#calendar .maincalendar .eventlist .event,
+#calendar .eventlist .description {
+  border:none !important;
+}
+ #calendar .maincalendar .eventlist .event {
+  padding-top: 20px;
+}
+#calendar .maincalendar .eventlist .event .topic,
+#calendar .maincalendar .eventlist .event .picture,
+#calendar .maincalendar .eventlist .event .side,
+#calendar .eventlist .description {
+  background-color:#fff;
+}
+
+.eventlist .date {
+  padding:0 10px;
+  font-size: 0.8em;
+}
+
+.eventlist .event .commands a{
+	padding-right:10px;
+}
+
+#calendar .eventlist .event tr td.topic {
+	border: none;
+}
+
+.forumpost .topic,
+.eventlist .topic {
+  background:  url(pix/forum/bg_forum_top_right.png) no-repeat top right;
+  border: none;
+  padding-top: 10px;
+  padding-right:10px;
+}
+
+.forumpost .author {
+  border-bottom: 1px solid #444444;
+  margin-right: 10px;
+  padding-bottom: 2px;
+  font-size: 0.8em !important;
+  color: #666666;
+}
+
+.forumpost .side,
+.eventlist .side {
+  background: url(pix/forum/bg_forum_bottom_left.png) repeat-y bottom right;
+}
+
+.forumpost .content,
+.eventlist .description {
+  background: url(pix/forum/bg_forum_bottom_right.png) repeat-y bottom right;
+  padding: 2px 15px 10px 5px;
+  font-size: 0.9em;
+  color: #444444;
+  line-height: 1.4em;
+}
+
+.forumpost .commands {
+  font-size: 0.9em;
+}
+
+.notepost,
+.notepost .header {background: none;}
+.notepost .footer {text-align: right;padding-right:10px;}
+.notepost .content {padding-left: 50px;	}
+
+
+#eventform table tbody tr td {
+  padding: 7px 3px;
+}
+img.userpicture,
+img.grouppicture {
+  background: url(pix/bg/shadow.gif) no-repeat bottom right;
+  /*padding: 0 5px 5px 0; Padding is unnecessary and causes alignment issues */
+  border-top: 1px solid #f8f8f8;
+  border-left: 1px solid #f8f8f8;
+}
+
+.sideblock img.userpicture {
+  background: url(pix/bg/shadow_small.gif)no-repeat bottom right;
+  padding: 0 2px 2px 0;
+}
+
+.forumolddiscuss {
+  padding-top: 10px;
+  font-size: 0.7em;
+}
+
+#intro.box {
+  border: 1px solid;
+  margin-top: 25px;
+}
+
+.singlebutton {
+  margin: 20px;
+  text-align: center;
+}
+
+.singlebutton input {
+  margin: auto;
+}
+/*included generaltable & logtable qualities*/
+
+.forumheaderlist .discussion .topic {
+  background: none;
+}
+
+.logtable,
+.forumheaderlist {
+ width:95%;
+ margin-left:auto;
+ margin-right:auto;
+}
+
+.forumheaderlist,
+.generaltable,
+.logtable,
+.files,
+#categoryquestions {
+  border: 1px solid #f7f7f7;
+  padding-bottom: 10px;
+}
+
+.forumheaderlist th,
+.generaltable th,
+.logtable th,
+.files th,
+#categoryquestions th,
+.quizquestions .invisiblefieldset th {
+  background: #ddd;
+  border-bottom: 1px solid #aaa;
+  border-left: 1px solid #fff;
+  text-transform: uppercase;
+  font-weight: normal;
+  padding: 2px 3px 0 0;
+}
+
+.logtable th,
+#participants th {
+  padding: 2px 5px 0;
+  font-size: 0.8em;
+}
+.forumheaderlist td,
+.generaltable td,
+.logtable td,
+.files td,
+#categoryquestions td {
+  border: none;
+  border-left: 1px solid #f7f7f7;
+  padding: 0 3px;
+}
+
+#categoryquestions select#menusortorder {
+  float: right;
+  margin-right: 5px;
+}
+.forumheaderlist .r0,
+.generaltable .r0 {
+  background: #f7f7f7;
+}
+
+.discussioncontrols td,
+.discussioncontrols div {
+  float: right;
+}
+
+.forumthread {
+  padding: 10px 35px;
+}
+
+.subscription,
+.glossarycontrol {
+  padding: 0 15px 10px;
+}
+
+/**********************
+*  Login  *  
+**********************/
+
+.loginpanel .forgotsub,
+.loginpanel .guestsub {
+  border-top-style: dashed;
+}
+
+.loginbox {
+  margin: 0 auto;
+}
+
+#login-index #content {
+  padding:10px;
+}
+
+/*********************
+*  Course  *
+*********************/
+
+.weekdates {
+  font-size: 0.9em;
+}
+#course-view .section td.content {
+  font-size: 0.9em;
+}
+
+#course-view .section .label {
+  background:none !important;
+}
+
+#course-view .weeks .section td.side,
+#course-view .section td.side {
+  background: #f1efe3;
+  padding: 3px;
+}
+
+#course-view .weeks .section .side img {
+  margin: 0;
+}
+
+/*********************
+*  Users  *
+*********************/
+
+.userinfobox {
+  border: none;
+}
+
+.userinfobox td.content {
+  border: 1px solid #bbb;
+  background: #f9f9f9
+}
+
+/********************
+*  Admin  *
+*********************/
+
+.groupmanagementtable {
+  margin: auto;
+}
+
+.plugin {
+  padding: 3px;
+}
+
+/*an apparently necessary 
+hack that I have made necessary*/
+#course-import #content,
+.question #content,
+.grade #content,
+.mod-quiz #content,
+.mod-workshop #content,
+.mod-choice #content,
+.mod-forum #content,
+.mod-resource #content {
+  padding-top: 20px;
+}
+
+.boxwidthnormal {
+  margin:auto;
+}
+
+#reset {
+  margin:auto;
+  width: 50%;
+  border: 1px solid #eee;
+  padding: 10px;
+}
+
+.block_admin_tree.sideblock .link.current {
+  background:none;
+}
+
+table.files {
+  margin: auto;
+}
+
+table.files td {
+  padding: 2px 10px;
+}
+
+#adminsettings fieldset {
+  background: #f9f9f9;
+  border: 1px solid #eee;
+}
+
+#admin-user .generaltable,
+#admin-roles-manage .generaltable {
+  font-size: 0.8em;
+}
+
+.profileeditor {
+  text-align: center;
+}
+
+#admin-roles-assign .generalbox,
+.errorbox {
+  margin: 10px auto;
+  text-align: center;
+  background: #EA9089;
+  	border-bottom: 2px solid #f33;
+	border-top: 2px solid #f33;  
+}
+
+#admin-roles-assign .generaltable td.cell.c0,#admin-roles-assign .generaltable td.cell.c0 {
+  font-size: 0.8em;
+}
+
+#notice.box.generalbox {
+  	background: #dadded;
+	border-bottom: 2px solid #33f;
+	border-top: 2px solid #33f;
+}
+
+#admin-mnet-enr_hosts .generalbox {
+  margin: 10px auto;
+  text-align: center;
+}
+
+.logselectform {
+  text-align: center;
+}
+
+.logtable td {
+  font-size: 0.75em;
+}
+
+/*******************
+*  Questions  *
+*******************/
+
+.questionbank {
+  border: 1px solid #eee;
+  padding: 10px;
+}
+
+.questionbank td {
+  padding: 6px;
+}
+
+.questionbank input {
+  margin: 5px;
+}
+
+.questionbank #displayoptions {
+  border-bottom: 1px dashed #eee;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+}
+
+.questionbank .boxaligncenter {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.questionbank .boxaligncenter table {
+  margin: auto;
+}
+
+table.quiz-edit-selected {
+  margin: auto;
+}
+
+/*******************
+*  Modules  *
+********************/
+
+.quizinfo {
+  margin: 10px;
+}
+
+#options {
+  padding-top: 10px;
+}
+#analysis-options {
+  border: 1px solid #eee;
+}
+
+#mod-resource-view .summary{
+  padding:4px 4px 0;
+}
+
+#mod-resource-view .resourcecontent {
+  margin-top: 0;
+}
+
+fieldset.invisiblefieldset {
+  background: #f7f7f7;
+  border: 1px solid #eee;
+  padding: 4px;
+}
+
+.navbutton fieldset.invisiblefieldset,
+.searchform fieldset.invisiblefieldset,
+form fieldset.invisiblefieldset {
+	background:none;
+	border:none;
+	padding:0
+}
+
+#displayoptions,
+#showbreaks {
+  text-align: center;
+}
+
+#displayoptions fieldset,
+#showbreaks fieldset {
+  text-align: left;
+}
+.questionbank table,
+#dates table {
+  margin: auto;
+}
+
+.mod-workshop table .generalbox {
+  border: 1px solid #eee;
+  background: #f7f7f7;
+  width: 60%;
+}
+
+.mod-workshop b {
+  line-height: 1.3em;
+}
+
+.reportlink {
+  padding-right: 5px;
+}
+
+.modified {clear: both; padding-top:10px;}
+
+.mod-forum #content {width:100%;}
+
+blockquote {
+border:none;
+}
+
+H2 headingblock header outline{
+  display:none;
+  font-color:#FFF;
+}
+/***** smccd_csm/styles_elegance.css end *****/
+
+/***** smccd_csm/styles_01.css start *****/
+
+/*****************
+*  Links  *
+*****************/
+
+a:link, a:visited {
+  color: #652E03;
+}
+
+a:hover, a:active {
+  color: #222222;
+}
+/*****************
+*  Left Column  *
+*****************/
+
+#left-column {
+  background: url(pix/bg/bg_leftnav.gif) right repeat-y;
+}
+
+#left-column .sideblock .title {
+  border-bottom-color:  #444444;
+  color: #444444;
+}
+
+#left-column .content ul li {
+  border-bottom-color: #652E03;
+}
+
+
+/** Right Column **/
+
+#right-column .sideblock .content {
+  border-color: #aaa9a3;
+  background: #f3f1e6;
+}
+/*****************
+*  Header  *
+*****************/
+
+#header-box h2,
+#header-box a:link,
+#header-box a:visited,
+#footer .logininfo a:link,
+#footer .logininfo a:visited,
+#footer .helplink a:link,
+#footer .helplink a:visited,
+.breadcrumb ul li a:link,
+.breadcrumb ul li a:visited {
+  color: #F3A502;
+}
+
+
+/******************
+*  Footer  *
+******************/
+
+.homelink a {
+  background: #F3A502;
+}
+
+/******************
+*  Course  *
+******************/
+  
+#course-view .weeks .current td.side,
+#course-view .current td.side {
+	background: #e2e7ed;
+}
+
+.forumheaderlist tr:hover,
+.generaltable tr:hover,
+.logtable tr:hover,
+.files tr:hover,
+#listdirectories tr:hover {
+  background: #f9ffdd;
+}
+/***** smccd_csm/styles_01.css end *****/
+

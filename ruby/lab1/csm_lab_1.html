@@ -1,0 +1,180 @@
+<html><head>
+
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<style type="text/css">.abstract, pre {border:solid 1px gray;background-color: lightyellow;padding:1em;font-size:110%;}.bright {color:navy;}body { line-height: 1.5; }</style>
+<title>lab 1</title>
+</head><body>
+<h1 align="center">LAB 1<br>
+<font size="+2">A Command-line Ruby Script</font></h1>
+<div>
+<p align="center"><strong>Douglas Putnam</strong></p>
+</div>
+<h3>Abstract:</h3>
+<div class="abstract"> In this lab we will learn to write a command
+line Ruby script
+that uses the Ruby String class.&nbsp; The String class has more than
+70 methods; we will use only a few of them in this exercise. In this
+exercise we will also learn about
+quoting with single, double, and HEREDOC quoting.<br>
+<br>
+This lab is not graded, but it is not optional. Upload your lab1.rb
+using the upload link.<br>
+</div>
+<!--End of Table of Contents-->
+<h1><a name="SECTION00020000000000000000">Reading and Online Resources</a></h1>
+<ol>
+<h4>Reading</h4>
+<li> Logging in to csmcis2.smccd.edu </li>
+<li><span style="font-style: italic;">Beginning Ruby</span>: Ch. 3
+through page 55,
+"Data, Expressions, Iteration, and Flow Control"<br>
+</li>
+<li><span style="font-style: italic;">Programming Ruby</span>: <a href="http://www.ruby-doc.org/docs/ProgrammingRuby/html/rubyworld.html">Ruby
+and
+Its
+World</a> (Ruby's environment) and <a href="http://www.ruby-doc.org/docs/ProgrammingRuby/html/tut_stdtypes.html">Standard
+Types</a> (Strings and Numbers)</li>
+<li>Example output: <a href="http://csmcis2.smccd.edu/%7Ecoolj/lab1.cgi" name="SECTION00030000000000000000">http://csmcis2.smccd.edu/~coolj/lab1.cgi</a>.</li>
+</ol>
+<h1><a name="SECTION00030000000000000000">Setup and Housekeeping</a></h1>
+<p>Complete the following tasks if you have not already done so.</p>
+<ol>
+<li>Log in to your CSMCIS2 account.</li>
+<li>Set the permissions correctly on your directories. Directories can 
+be 0711, regular files (html, css, images, etc) 0644, and cgi scripts 
+0700. You can use your SFTP client to set permissions or use the <code>chmod</code> command to set permissions. <br><br>Example: <code>chmod 711 $HOME $HOME/public_html</code><br>
+</li>
+</ol>
+<h1><a name="SECTION00040000000000000000">1 Lab 1<br>
+</a></h1>
+<ol>
+<li>Create a Ruby&nbsp; script named <big><tt style="font-weight: bold;">lab1.rb</tt></big>. <br>
+</li>
+<li>Complete the friendly and amusing exercises below.</li>
+</ol>
+<h2><a name="SECTION00041000000000000000">Exercises</a><br>
+</h2>
+<span style="font-weight: bold;">The String Class&nbsp; </span><br>
+Ruby's String class has about 75 methods. We will use a few of them in
+this lab. Before starting this exercise take a glance at the methods 
+available to every string: 
+http://www.ruby-doc.org/core/classes/String.html. 
+
+<br>
+Complete the following exercises using this string below (<code>the_string</code>).
+You
+will notice that this string has many leading spaces and that each
+line ends with a
+capital 'X'. You may use the result of one exercise as the input to the
+succeeding exercise.<br>
+<h2 class="bright"><code>the_string</code></h2>
+Use <a href="http://csmcis2.smccd.edu/%7Ecoolj/the_string.cgi">this
+string</a> for the exercises. The string below may not render correctly
+in WebAccess
+due to the way Moodle (the software behind WebAccess) handles extra
+spaces and tabs. The string below is only an approximation of <code>the_string</code>.
+Notice
+the <code>heredoc</code> quotes.
+<pre>the_string = &lt;&lt;HERE<br> This string has leading space and too MANY tabs and sPaCes betweenX<br> the indiVidual Words in each Line.X<br> Each Line ends with a accidentally aDDED X.X<br> in this lab you wilL WRITE code that "sAnITizES" this string by normalizingX<br> ("normalizing" means capitalizing sentences and setting otherX<br> characters to lower case) and removes in the extra spaces between WOrds.X<br>HERE<br></pre>
+This text may (or may not) be poorly rendered by Moodle (the software
+running WebAccess). You can also see <a href="http://csmcis2.smccd.edu/%7Ecoolj/the_string.cgi"><code>the_string</code>
+at this link</a>.
+<h2><a name="SECTION00043000000000000000">1.1 squeeze</a></h2>
+use <tt>String#squeeze</tt> to squeeze the extra whitespace (and only
+the whitespace---spaces and tabs) from the
+string. Squeezing converts multiple recurring characters into a single
+character. Make sure you don't squeeze any alphanumeric characters.
+Print the result.
+<h2><a name="SECTION00044000000000000000">1.2 downcase</a></h2>
+<p>Use <tt>String#downcase</tt> to turn our <span style="font-family: Courier New,Courier,monospace;">the_string</span>
+into all
+lowercase. Print the result.</p>
+<h2><a name="SECTION00045000000000000000">1.3 upcase</a></h2>
+<p>Use <tt>String#upcase</tt> to turn <span style="font-family: Courier New,Courier,monospace;">the_string</span>
+into all uppercase.
+Print the result.</p>
+<h2><a name="SECTION00046000000000000000">1.4 capitalize</a></h2>
+<p>Capitalize the first <span style="font-style: italic;">alphabetical</span>
+character of each line in <span style="font-family: Courier New,Courier,monospace;">the_string</span>.
+Print the
+result. TIP: <span style="font-family: monospace;">String::capitalize</span>
+will not to the job by itself.<br>
+</p>
+<h2><a name="SECTION00047000000000000000">1.5 Removing the Ending 'X'</a></h2>
+<p>Get rid of the "X" at the end of each line in <big><span style="font-family: Courier New,Courier,monospace;">the_string</span></big>.
+You
+may have to combine the action of several methods to to accomplish.
+Print
+the result.</p>
+<h2><a name="SECTION00048000000000000000">1.6 each_byte</a></h2>
+<p>Use <tt>String#each_byte</tt> to show the ASCII decimal and hex
+value of each
+character in <big><span style="font-family: Courier New,Courier,monospace;">the_string</span></big>.
+You
+will
+find
+the
+'%' method useful for this exercise, or you may use <big style="font-weight: bold;"><span style="font-family: monospace;">printf</span></big><span style="font-weight: bold;"> or </span><big style="font-weight: bold;"><span style="font-family: monospace;">sprintf</span>.</big><span style="font-weight: bold;"> Print the result.</span></p>
+<h2 style="font-weight: bold;"><a name="SECTION00049000000000000000">1.7
+split</a></h2>
+<p>Use <tt>String#split</tt> to split <span style="font-family: Courier New,Courier,monospace;">the_string</span>
+into an array of
+words. Print the resulting array<br>
+</p>
+<h2 style="font-weight: bold;"><a name="SECTION000410000000000000000">1.8
+crypt</a></h2>
+<p>Use <tt>String#crypt</tt> to encode <span style="font-family: Courier New,Courier,monospace;">the_string</span>.
+Print the result<br>
+</p>
+<p><big style="font-weight: bold;"><big>1.9 Replace</big></big><br>
+In many languages strings are an <span style="font-style: italic;">immutable</span>
+sequence of characters and cannot be changed; they can only be copied
+to new strings. Ruby, however, allows
+for replacing the contents of a string. There are several String
+methods that can accomplish this
+operation. You can check the string's object id to make sure that you
+have not created a new string. </p>
+<pre>a = "this is a string"<br>puts a.object_id # ==&gt; 84410<br>a = 'This is a new string'<br>puts a.object_id # ==&gt; 84390. Oops! A new string<br>a.replace('This is new content')<br>puts a.object_id # ==&gt; 84390. The same string<br></pre>
+In this exercise, replace the contents of <span style="font-family: monospace;">the_string</span> <span style="font-style: italic; font-weight: bold;">without creating
+a new string</span> by replacing the first 100 characters of the_string
+with the first 100 characters <span style="font-style: italic;">stripped</span>,
+<span style="font-style: italic;">reversed</span>, <span style="font-style: italic;">squeezed</span>, and
+<span style="font-style: italic;">upper-cased</span>. In plain words,
+grab the
+first 100 characters of the original <span style="font-family: monospace;">the_string</span> defined in
+question 1,
+strip the whitespace, reverse what's left, squeeze it, and upper-case
+it, use what you've got left to replace the first 100 characters of
+the_string, then print it.
+<p><big style="font-weight: bold;"><big>1.10 Inspect</big></big><br>
+<code>inspect()</code> is a good tool for printing an object, with
+special characters escaped. Print the output of <big><span style="font-family: monospace;">the_string.inspect</span></big>.<br>
+<br>
+The <code>p</code> function accomplishes the same result as the
+inspect() method, but is used in this way
+</p>
+<pre>p [1,2,3,4,5] # ==&gt; [1, 2, 3, 4, 5]</pre>
+<br>
+<h2>2 Running Your Command Line Script</h2>
+<p>To run your script you need to execute it with Ruby. Log in to
+CSMCIS2. Create or copy your script to your CSMCIS2 account. To run the
+script, enter this code at the command prompt:<br>
+</p>
+<p><span style="font-family: monospace;">ruby lab1.rb</span><br>
+</p>
+<p>Then hit the Enter key.<br>
+</p>
+<h2>3 Questions About This Lab?</h2>
+<p>Post your questions on the class Labs forum on WebACCESS.<br>
+</p>
+<h2>4 <a name="SECTION00060000000000000000">Upload Your Code to
+WebACCESS</a></h2>
+This lab is an ungraded assignment. It is not optional. Use the upload
+link provided on the class home page to upload your code.<br>
+<br>
+<br>
+<span style="font-weight: bold;">Have fun...</span><br>
+Douglas Putnam<br>
+CSM CIS Dept<span style="font-weight: bold;"><br>
+</span> <br>
+</body></html>

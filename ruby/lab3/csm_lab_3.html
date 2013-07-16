@@ -1,0 +1,169 @@
+<html><head>
+
+
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<title></title>
+</head><body>
+<h1 align="center">LAB 3
+<br>
+<font size="+2">Ruby Classes</font></h1>
+<div>
+<p align="center"><strong>Douglas Putnam</strong></p>
+</div>
+<h3>Abstract:</h3>
+<div>Up to this point we've worked with Ruby's built-in classes. In Lab
+3 we will work with classes that we create. Ruby's classes are
+extremely sophisticated and flexible. We can modify the classes at
+will. In this exercise, we we will modify Ruby classes and instances of
+classes at runtime<br>
+</div>
+<p>
+<br>
+</p>
+<h2><a name="SECTION00010000000000000000">Contents</a>
+</h2>
+<!--Table of Contents-->
+<ul>
+<li><a name="tex2html8" href="#SECTION00020000000000000000">1 Reading
+and Online Resources</a> </li>
+<li><a name="tex2html9" href="#SECTION00030000000000000000">2
+Creating a User Class</a> </li>
+<li><a name="tex2html10" href="#SECTION00040000000000000000">3
+Reading the /etc/passwd File</a> </li>
+<li><a name="tex2html11" href="#SECTION00050000000000000000">4 TO DO</a>
+</li>
+<li><a name="tex2html12" href="#SECTION00060000000000000000">5 SUBMIT
+YOUR CODE</a> </li>
+</ul>
+<!--End of Table of Contents-->
+<h1><a name="SECTION00020000000000000000">1 Reading and Online Resources</a>
+</h1>
+<p>
+</p>
+<ol>
+<li><i>Beginning Ruby</i>, Chapter 6 </li>
+<li>Read <i>Programming Ruby</i>, The "<a target="_blank" href="http://www.ruby-doc.org/docs/ProgrammingRuby/html/tut_classes.html">Classes,
+Objects,
+and Variables</a>" and "<a target="_blank" href="http://www.ruby-doc.org/docs/ProgrammingRuby/html/classes.html">Classes
+and
+Objects</a>"</li>
+<li>Example output: <a target="_blank" href="http://csmcis2.smccd.edu/%7Ecoolj/lab3.cgi">http://csmcis2.smccd.edu/~coolj/lab3.cgi</a></li>
+<li>Singleton Methods<br>
+</li>
+</ol>
+<h1><a name="SECTION00030000000000000000">2 Creating a Student Class</a>
+</h1>
+<p>
+Armed with a few pieces of information, we can proceed. All of the
+students in the Spring 2011 semester have a home directory in
+/home/students/spr11. Using
+this information you can find the line in <code>/etc/passwd</code>
+that contains the account information of every student.</p>
+<h3><big>/etc/passwd</big></h3>
+<p>The <code>passwd</code>
+file is composed of 7 fields separated by a "<code>:</code>" delimiter:
+</p>
+<pre>dputnam:*:4185:208:Douglas Putnam:/home/students/spr11/dputnam:/usr/bin/bash<br></pre>
+<p>
+</p>
+<dl>
+<dt><strong>1. <code>username</code></strong></dt>
+<dd>The student's user name </dd>
+<dt><strong>2. <code>password</code></strong></dt>
+<dd>The password (not actually held in this field) </dd>
+<dt><strong>3. <code>uid</code></strong></dt>
+<dd>User id </dd>
+<dt><strong>4. <code>guid</code></strong></dt>
+<dd>User's groupd id </dd>
+<dt><strong>5. <code>gcos_field</code></strong></dt>
+<dd>Information about the user. The term gcos
+come from the GECOS operating system designed by General Electric in
+1962. </dd>
+<dt><strong>6. <code>home_directory</code></strong></dt>
+<dd>The user's home directory </dd>
+<dt><strong>7. <code>login_shell</code></strong></dt>
+<dd>The user's login shell </dd>
+</dl>
+<p>
+</p>
+<h1><a name="SECTION00040000000000000000">3 Reading the <code></code><code>/etc/passwd</code>
+File</a>
+</h1>
+<p>
+We can read all of the lines in the /etc/passwd file into an array
+by using
+</p>
+<dl compact="compact">
+<dt> <br>
+</dt>
+<dd>lines&nbsp;=&nbsp;File.readlines('/etc/passwd')</dd>
+</dl>
+or read the file into a single line<br>
+<br>
+&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; line = File.read('/etc/passwd')<br>
+<p>
+</p>
+<h1><a name="SECTION00050000000000000000">4 TO DO</a>
+</h1>
+<p>
+</p>
+<ol>
+<li>Create accessors (getters and setters) for each field in <code>/etc/passwd</code>
+using the names in the list above.
+<ol type="a">
+<li>Your <code>Student</code> class should have accessors for
+each of the
+password file fields. Use Ruby's <code>attr_accessor</code> method to
+create these setters and getters. </li>
+</ol>
+</li>
+<li>Create methods for the student's first and last name. Name the
+methods <code>first_name</code> and <code>last_name</code>. Use the <code>gcos_field</code>
+information for creating these names. Examine the data in the <code>/etc/passwd</code>
+to determine exactly how to divide the <code>gcos_field</code> into
+first
+name and last names. </li>
+<li>Determine the user's <code>first_tname</code> and <code>last_name</code>
+values using
+the information in the <code>gcos_field</code>. If the name is blank
+(there are a few) set the field's value to "-no data-". </li>
+<li>For each instance create two singleton methods named first_name
+and last_name for each of the spr10
+students. Because the singleton methods have the same name as the class
+methods, they will suppress the class methods, in effect overwriting
+them in that instance. In my example I use the singleton methods to add
+HTML '&lt;b style="color:
+blue;font-size:120%;"&gt;...&lt;/b&gt;'
+tags around the user's first and last names. This will make the user's
+names stand out when we display them on a web page. Singleton methods
+do not change the Student class itself, only the instance.</li>
+<li>Use a class variable named <code>@@count</code> to keep track of
+the number
+of instances of the Student class.<br>
+</li>
+<li>Create an instance variable named <code>@number</code> to set
+the instance
+number from <code>@@count</code>. Update <code>@@count</code> by
+adding one
+to it. </li>
+<li>Print an HTML table showing all of the Student data. </li>
+<li>Use <code>@number</code> to print a column of numbers. </li>
+<li>Your output should look similar to this example:
+http://csmcis2.smccd.edu/~coolj/lab3.cgi </li>
+</ol>
+<p>
+</p>
+<h1><a name="SECTION00060000000000000000">5 SUBMITTING YOUR CODE</a></h1>
+<p>Upload your lab3.cgi to Webaccess.Make your script viewable at this
+URL:
+http://csmcis2.smccd.edu/~YOURNAME/lab3.cgi<br>
+</p>
+<p>If you notice any errors in this lab, or have questions, post them
+on the class forums.
+</p>
+<p>Have fun!
+</p>
+<p>-Doug
+<br>
+</p>
+</body></html>
